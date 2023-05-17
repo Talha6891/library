@@ -1,0 +1,83 @@
+.add-book-form {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+}
+
+.add-book-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.add-book-form form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-book-form .form-group {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(50% - 20px);
+    color: black;
+}
+
+.add-book-form .form-group:last-child {
+    margin-right: 0;
+}
+
+.add-book-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.add-book-form input[type="text"],
+.add-book-form input[type="date"],
+.add-book-form textarea,
+.add-book-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.add-book-form input[type="text"]::placeholder,
+.add-book-form input[type="date"]::placeholder,
+.add-book-form textarea::placeholder,
+.add-book-form select::placeholder {
+    color: grey;
+}
+
+.add-book-form select option {
+    color: black;
+}
+
+.add-book-form button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1cacd7;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-book-form button[type="submit"]:hover {
+    background-color: #0e7ca3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}

@@ -1,0 +1,43 @@
+.quotes {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #F6F6F6, #D6D6D6);
+}
+
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    padding: 40px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.quote p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0;
+    color: #555;
+}
+
+.quote span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    display: block;
+    color: #888;
+}
+
+b{
+    color: black;
+    font-weight: bolder;
+}

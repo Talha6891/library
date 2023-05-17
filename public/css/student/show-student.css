@@ -1,0 +1,57 @@
+.student {
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #302e2e;
+}
+
+.student h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.student .details {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.student .details p {
+    margin-top: 10px;
+}
+
+.student .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.student .buttons .edit, .student .buttons .delete {
+    padding: 15px;
+    background-color: #1cacd7;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.student .buttons a{
+    text-decoration: none;
+}
+
+.student .buttons a:hover {
+    background-color: #0097ba;
+}
+
+.student .buttons button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
