@@ -19,28 +19,24 @@ Route::get('/', function () {
     return view('layout.quotes');
 })->name('/');
 
+Route::middleware('auth')->group(function () {
+    Route::get('search', function () {
+        return view('borrow.search-bar');
+    })->name('search');
+
+    Route::resource('book', BookController::class);
+    Route::get('book.pendingBook', [BookController::class, 'pendingBook'])->name('book.pendingBook');
+
+    Route::resource('student', StudentController::class);
+    Route::resource('borrow', BorrowController::class);
+    Route::get('borrow.returnBook', [BorrowController::class, 'returnBook'])->name('borrow.returnBook');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+});
+
 Route::middleware(['redirectIfAuthenticated'])->group(function () {
-
-    Route::get('register_form', [\App\Http\Controllers\AuthController::class, 'register_form'])->name('register_form');
-    Route::get('login_form', [\App\Http\Controllers\AuthController::class, 'login_form'])->name('login_form');
-    Route::post('register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register');
-    Route::post('login', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
+    Route::get('register_form', [AuthController::class, 'register_form'])->name('register_form');
+    Route::get('login_form', [AuthController::class, 'login_form'])->name('login_form');
+    Route::post('register', [AuthController::class, 'register'])->name('register');
+    Route::post('login', [AuthController::class, 'login'])->name('login');
 });
-
-Route::middleware('auth')->group(function (){
-
-Route::get('search', function () {
-    return view('borrow.search-bar');
-})->name('search');
-
-Route::resource('book',\App\Http\Controllers\BookController::class);
-Route::get('book.pendingBook', [\App\Http\Controllers\BookController::class, 'pendingBook'])->name('book.pendingBook');
-Route::resource('student',\App\Http\Controllers\StudentController::class);
-Route::resource('borrow',\App\Http\Controllers\BorrowController::class);
-Route::get('borrow.returnBook', [\App\Http\Controllers\BorrowController::class, 'returnBook'])->name('borrow.returnBook');
-
-// Routes for logout
-Route::post('logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
-});
-
 
