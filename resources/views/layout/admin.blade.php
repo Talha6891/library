@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>@yield('title')</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     @yield('header-css')
-    @yield('footer-css')
+
     @yield('quotes-css')
+     {{--  
+    @yield('footer-css')
     @yield('add-book-css')
     @yield('add-book-message-css')
     @yield('show-all-book-css')
@@ -24,14 +26,13 @@
     @yield('show-return-book-css')
     @yield('show-pending-books-message-css')
     @yield('register-css')
-    @yield('login-css')
-
+    @yield('login-css') --}}
 </head>
 <body>
 {{--header--}}
 @yield('header')
 
-{{--quotes--}}
+{{-- quotes --}}
 @yield('quotes')
 
 {{--add book--}}
@@ -88,10 +89,12 @@
 @yield('login')
 
 {{--footer--}}
-@yield('footer')
+{{-- @yield('footer') --}}
 
 {{--random quotes using javaScript java --}}
 @yield('quotes-js')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
 

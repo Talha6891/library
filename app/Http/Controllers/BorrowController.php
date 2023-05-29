@@ -19,7 +19,7 @@ class BorrowController extends Controller
     {
         $borrow = Borrow::all();
 
-      //  return view('');
+        //  return view('');
     }
 
     /**
@@ -83,7 +83,7 @@ class BorrowController extends Controller
      */
     public function edit(Borrow $borrow)
     {
-        return view('borrow.show-return-book-form',compact('borrow'));
+        return view('borrow.show-return-book-form', compact('borrow'));
     }
 
     /**
@@ -126,7 +126,7 @@ class BorrowController extends Controller
             return view('borrow.borrow-message', ['message' => 'Book has already been returned']);
         }
 
-// Update the borrow record with the return date and fine amount (if any)
+        // Update the borrow record with the return date and fine amount (if any)
         $current_date = Carbon::now()->format('Y-m-d');
         if ($current_date > $borrow->return_due_date) {
             $days_overdue = (strtotime($current_date) - strtotime($borrow->return_due_date)) / (60 * 60 * 24);
@@ -139,6 +139,6 @@ class BorrowController extends Controller
         }
         $borrow->save();
         $borrow->return_date = $current_date;
-        return view('borrow.show-return-book',compact('borrow'));
+        return view('borrow.show-return-book', compact('borrow'));
     }
 }

@@ -30,7 +30,8 @@ class AuthController extends Controller
         event(new AssignAdminRole($validated));
         Auth::login($user);
 
-        return redirect()->intended('/');;
+        return  redirect('/');
+      //  return redirect()->intended('/');
     }
 
     public function login_form()

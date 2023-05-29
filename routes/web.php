@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\BorrowController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout.quotes');
 })->name('/');
+
+//for showing pieChart
+Route::get('/getChartData', [ChartController::class, 'getChartData'])->name('getChartData');
 
 Route::middleware('auth')->group(function () {
     Route::get('search', function () {

@@ -1,0 +1,34 @@
+#container1{
+    max-width: 900px;
+    height: 130px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    font-size: 21px;
+}
+
+#container2{
+    max-width: 440px;
+    height: 130px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    font-size: 18px;
+    color: white;
+}
+
+#container3{
+    display: block;
+    /* border: 5px solid  rgb(20, 192, 149); */
+    height: 350px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+#container3 .card1{
+    background-color: #05c46b;
+    /* margin-left: -10px; */
+}
+
+#chart {
+    width: 100%;
+    background-color: #4b4b4b;
+}
