@@ -1,0 +1,17 @@
+.container {
+    border: 1px solid #0d6efd;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container h1 {
+
+    text-align: center;
+    font-size: 30px;
+}
+
+span {
+    color: red;
+    display: block;
+    margin-top: 5px;
+}

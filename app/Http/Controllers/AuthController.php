@@ -10,6 +10,12 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+
+    public function registerOrLoginForm(){
+
+        return view('auth.login-register-with-captcha');
+    }
+
     //register view
     public  function register_form(){
 
@@ -31,7 +37,6 @@ class AuthController extends Controller
         Auth::login($user);
 
         return  redirect('/');
-      //  return redirect()->intended('/');
     }
 
     public function login_form()

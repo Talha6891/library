@@ -10,7 +10,7 @@
 <body>
 <form method="POST" action="{{ route('register') }}">
     @csrf
-
+    <h1>Welcome To LMS</h1>
     <div>
         <label for="name">Name</label>
         <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
