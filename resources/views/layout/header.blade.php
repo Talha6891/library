@@ -1,11 +1,9 @@
 @extends('layout.admin')
 
 @section('header-css')
-    <link rel="stylesheet" href="{{asset('css/home/header.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/home/header.css') }}">
 @endsection
 @section('header')
-    <style>
-    </style>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <a href="{{ route('/') }}" class="navbar-brand ms-3">Library</a>
@@ -59,11 +57,11 @@
                 @if (Route::has('login'))
                     @auth
                         <div class="user">
-                            <span>{{ Auth::user()->name }}</span>
+                            <span class="user-name">{{ Auth::user()->name }}</span>
                             <div class="logout">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <button type="submit" class="btn btn-primary">Logout</button>
+                                    <button type="submit" class="btn btn-dark">Logout</button>
                                 </form>
                             </div>
                         </div>
