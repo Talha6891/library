@@ -13,13 +13,13 @@
 
 <body>
     <div class="container col-md-4 offset-md-4 mt-5">
-        <h1 class="text-center mt-3 mb-3">Library Managent System</h1>
+        <h1 class="text-center mt-3 mb-3">Library Management System</h1>
         <form action="{{ route('login') }}" method="POST">
             @csrf
             <!-- Email input -->
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" id="email" class="form-control" required>
+                <input type="email" id="email" name="email" class="form-control" required>
                 @error('email')
                     <span>{{ $message }}</span>
                 @enderror
@@ -28,11 +28,22 @@
             <!-- Password input -->
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" class="form-control" required>
+                <input type="password" id="password" name="password" class="form-control" required>
                 @error('password')
                     <span>{{ $message }}</span>
                 @enderror
             </div>
+
+            {{--  <!-- reCAPTCHA --> --}}
+            {{-- <div class="form-group mt-4" style="border: 1px solid red;">
+
+                {!! NoCaptcha::renderJs() !!}
+                {!! NoCaptcha::display() !!}
+
+                @error('g-recaptcha-response')
+                    <span>{{ $message }}</span>
+                @enderror
+            </div> --}}
 
             <!-- Remember me and Forgot password -->
             <div class="form-group form-check">
@@ -65,10 +76,9 @@
                 </button>
             </div>
         </form>
-
     </div>
+{{--    <script src="https://www.google.com/recaptcha/api.js" async defer></script>--}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

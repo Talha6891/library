@@ -10,12 +10,12 @@
 
 @section('quotes')
     <div class="d-flex mt-2">
-        <div class="container  mt-2 " id="container1">
-            <div class="row ">
-                <div class="col-12 mt-4 text-center quotes "></div>
+        <div class="container mt-2" id="container1">
+            <div class="row">
+                <div class="col-12 mt-4 text-center quotes"></div>
             </div>
         </div>
-        <div class="container  mt-2 bg-secondary" id="container2">
+        <div class="container mt-2 bg-secondary" id="container2">
             <div class="row">
                 <div class="col-12 text-start mt-2">
                     <strong>Total Books:</strong>&nbsp;{{ $totalBooks }}<br>
@@ -31,12 +31,10 @@
     <div class="container mt-3 ms-2" id="container3">
         <div class="row">
             {{-- card 1 --}}
-            <div class="col-4">
+            <div class="col-5">
                 <div class="card card1">
-
                     <img src="{{ asset('images/student-cap.png') }}" alt="student" width="130px" height="130px"
                         class="card-img-top">
-
                     <div class="card-body">
                         <div class="card-title">
                             <h1>Students</h1>
@@ -48,13 +46,12 @@
                                 <strong>Returned Books:</strong>&nbsp;{{ $finedStudentsCount }}<br>
                                 <strong>Pending Books:</strong>&nbsp;{{ $finedStudentsCount }}<br>
                             </p>
-
                         </div>
                     </div>
                 </div>
             </div>
             {{-- card 2 --}}
-            <div class="col-4">
+            <div class="col-5">
                 <div class="card card1">
                     <img src="{{ asset('images/book.png') }}" alt="Book" width="100px" height="130px"
                         class="card-img-top">
@@ -73,30 +70,30 @@
                     </div>
                 </div>
             </div>
-            {{-- card 3 --}}
-            <div class="col-4">
-                <div class="card card1">
-                    <img src="{{asset('images/statistic.png')}}" alt="Book" width="100" height="140"  class="card-img-top">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h2>Today Stats</h2>
-                        </div>
-                        <div class="card-text">
-                            <p>
-                                <strong>New Students:</strong>&nbsp;{{ $registeredToday }}<br>
-                                <strong>Borrowed Today:</strong>&nbsp;{{ $issuedToday }}<br>
-                                <strong>Returned Todays:</strong>&nbsp;{{ $returnedToday }}<br>
-                                <strong>Fine to Students:</strong>&nbsp;{{ $finedToday }}<br>
-                            </p>
+        </div>
+
+    </div>
+
+    {{-- slider
+    <div class="cotainer-fluid mt-4" id="slider">
+        <div class="row">
+            <div class="col-4 slider-text" style="border: 1px solid red;">
+                <h1 class="text-center">Best Books of All Time</h1>
+            </div>
+            <div class="col-8" style="border: 1px solid red;">
+                <div class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div id="myCarousel" class="carousel-item active">
+                            <img src="{{asset('images/instagram.png')}}" alt="" width="100" height="200">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- Chart --}}
-    <div class="container-fluid mt-4  justify-content-center align-items-center" id="chart">
+    <div class="container-fluid mt-4 justify-content-center align-items-center" id="chart">
         <div class="row">
             <div class="col-4 offset-4 mt-2 mb-2">
                 <div class="card">

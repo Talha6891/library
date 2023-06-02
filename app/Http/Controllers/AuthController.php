@@ -7,28 +7,29 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use NoCaptcha;
 
 class AuthController extends Controller
 {
-
-    public function registerOrLoginForm(){
-
+    public function registerOrLoginForm()
+    {
         return view('auth.login-register-with-captcha');
     }
 
-    //register view
-    public  function register_form(){
-
+    // Register view
+    public function register_form()
+    {
         return view('auth.register');
     }
 
-   //register user
+    // Register user
     public function register(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
+            // 'g-recaptcha-response' => 'required|captcha',
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
@@ -36,7 +37,7 @@ class AuthController extends Controller
         event(new AssignAdminRole($validated));
         Auth::login($user);
 
-        return  redirect('/');
+        return redirect('/');
     }
 
     public function login_form()
@@ -46,6 +47,12 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        $validated = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+//            'g-recaptcha-response' => 'required|captcha',
+        ]);
+
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
@@ -62,6 +69,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('authenticate');
     }
 }
