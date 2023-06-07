@@ -34,16 +34,16 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Issue Book</a>
+                        <a href="{{ route('borrow.create') }}" class="nav-link active">Issue Book</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Pending Books</a>
+                        <a href="{{ route('book.pendingBook') }}" class="nav-link active">Pending Books</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Show Books</a>
+                        <a href="{{ route('book.index') }}" class="nav-link active">Show Books</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Return Book</a>
+                        <a href="{{ route('search') }}" class="nav-link active">Return Book</a>
                     </li>
                 </ul>
                 {{-- SEARCH BAR --}}

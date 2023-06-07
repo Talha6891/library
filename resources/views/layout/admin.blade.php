@@ -8,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     @yield('header-css')
     @yield('quotes-css')
-     {{--  
-    @yield('footer-css')
+    @yield('footer-css')      
     @yield('add-book-css')
     @yield('add-book-message-css')
     @yield('show-all-book-css')
@@ -25,7 +24,7 @@
     @yield('show-return-book-css')
     @yield('show-pending-books-message-css')
     @yield('register-css')
-    @yield('login-css') --}}
+    @yield('login-css')
 </head>
 <body>
 {{--header--}}
@@ -87,8 +86,8 @@
 {{-- login --}}
 @yield('login')
 
-{{--footer--}}
-{{-- @yield('footer') --}}
+{{-- footer --}}
+@yield('footer')
 
 {{--random quotes using javaScript java --}}
 @yield('quotes-js')

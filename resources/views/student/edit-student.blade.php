@@ -43,4 +43,5 @@
             <button type="submit" class="submit-btn">Update Student</button>
         </form>
     </div>
+
 @endsection

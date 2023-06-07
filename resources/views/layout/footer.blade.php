@@ -1,7 +1,7 @@
 @extends('layout.admin')
 
 @section('footer-css')
-    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 @endsection
 
 @section('footer')
@@ -10,7 +10,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <h3>About Us</h3>
-                    <p>We are a library management system that aims to make book borrowing and lending easier and more efficient.</p>
+                    <p>We are a library management system that aims to make book borrowing and lending easier and more
+                        efficient.</p>
                 </div>
                 <div class="col-md-4">
                     <h3>Contact Us</h3>
@@ -25,9 +26,13 @@
                         <li><a href="#"><img src="/images/twitter.png" width="30px" height="30px"></a></li>
                         <li><a href="#"><img src="/images/instagram.png" width="30px" height="30px"></a></li>
                     </ul>
+                    <div class="form-outline">
+                        <h3>Subscribe:</h3>
+                        <input type="email" id="form1" class="form-control" placeholder="Enter Email" />
+                        <button type="button" class="btn btn-dark ml-2">Search</button>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-
 @endsection

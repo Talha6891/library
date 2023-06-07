@@ -11,19 +11,21 @@
 @endsection
 
 @section('show-all-students')
-    <div class="student-list-container">
-        @foreach($students as $student)
-            <div class="student-list">
-                <div class="student">
-                    <div class="details">
-                        <h2>{{ $student->fname }} {{ $student->lname }}</h2>
-                        <p><strong>Session:</strong> {{ $student->session }}</p>
-                        <p><strong>Semester:</strong> {{ $student->semester }}</p>
-                        <p><strong>Roll No:</strong> {{ $student->roll_no }}</p>
-                        <a href="{{ route('student.show', $student->id) }}" class="view">View Student</a>
+    <div class="container">
+        <div class="row">
+            @foreach($students as $student)
+                <div class="col-md-4 mt-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $student->fname }} {{ $student->lname }}</h5>
+                            <p class="card-text"><strong>Session:</strong> {{ $student->session }}</p>
+                            <p class="card-text"><strong>Semester:</strong> {{ $student->semester }}</p>
+                            <p class="card-text"><strong>Roll No:</strong> {{ $student->roll_no }}</p>
+                            <a href="{{ route('student.show', $student->id) }}" class="btn btn-primary">View Student</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </div>
 @endsection

@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function() {
     var ctx = document.getElementById('myChart').getContext('2d');
-    
+
     // Make an AJAX request to fetch data from the server
-    fetch('/getChartData') // Use the Laravel route URL
+    fetch('/getChartData') // Use the Laravel route URL or specify the correct URL
         .then(function(response) {
             return response.json();
         })
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function() {
                             'rgba(255, 99, 132, 0.7)',
                             'rgba(54, 162, 235, 0.7)',
                             'rgba(255, 205, 86, 0.7)',
-                            'rgba(75, 192, 192, 0.7)'
+                            'red' 
                         ],
                         borderWidth: 1
                     }]

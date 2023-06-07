@@ -15,37 +15,21 @@
     color: white;
 }
 
-#container3{
-    display: block;
-    /* border: 5px solid  rgb(20, 192, 149); */
-    height: 350px;
-    border-radius: 10px;
-    max-width: 700px;
-    border: 1px solid red;
-
+#container3 .card .card-body{
+    border: 1px solid #057ec4;
 }
 
-#container3 .card1{
-    background-color: #057ec4;
-    /* margin-left: -10px; */
-}
-
-#chart {
-    width: 100%;
+#container4{
     background-color: #4b4b4b;
 }
 
-#slider{
-    border: 1px solid red;
-    height: 300px;
+.carousel-caption h4,.carousel-caption p{
+
+    color: black;
+    background: white;
+    text-align: start;
 }
 
-#slider h1{
-    font-size: 30px;
-    margin: auto;
-    font-weight: bolder;
-}
-
-#slider div{
-    height: 300px;
+#myChart{
+    width: 100%;
 }
